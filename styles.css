@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* creating variables for page colors & fonts */ 
+:root {
+    /* primary colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /*other colors*/
+    --very-dark-blue: hsl(217, 54%, 11%); /*main background*/
+    --very-dark-blue2: hsl(216, 50%, 16%); /* card-background */
+    --very-dark-blue3: hsl(215, 32%, 27%); /*line */
+    --white: hsl(0, 0%, 100%);
+    --hover-color: rgba(0, 255, 247, 0.5);
+
+    --font-family: 'Outfit', sans-serif;
+}
+/* reseting margin & padding page styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background: var(--very-dark-blue);
+}
+
+/* aligning nft card to the center of the page*/
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 375px;
+    background: var(--very-dark-blue2);
+    border-radius: 1.5rem;
+    font-family: var(--font-family);
+    font-size: 18px;
+}
+
+.image-container, .text1, .text2, .line, .creator {
+    width: 90%;
+}
+
+.image-container {
+    margin: 1rem auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.overlay-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: var(--hover-color);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.image-overlay {
+    align-self: center;
+}
+
+.image-container:hover .overlay-div {
+    opacity: 1;
+}
+
+.text1 {
+    margin: 0 auto;
+}
+
+.text2 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.paragraph {
+    margin-bottom: 1rem;
+    color: var(--soft-blue);
+}
+
+.eth img, .time-left img {
+    margin-right: 10px;
+}
+
+.time-left {
+    color: var(--soft-blue);
+}
+.eth {
+    color: var(--cyan);
+}
+
+.line {
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    margin: 2rem auto;
+    color: var(--soft-blue);
+}
+.avatar {
+    width: 40px;
+    margin-right: 30px;
+}
+
+.creator-name {
+    color: var(--white);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+h1:hover, .creator-name:hover {
+    color: var(--cyan);
+}
+
+.attribution {
+    color: var(--very-dark-blue3);
+}
+
+.challenge-links {
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.challenge-links a {
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.challenge-links:first-of-type {
+    margin-left: -10px;
+}
